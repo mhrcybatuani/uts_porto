@@ -3,130 +3,148 @@
   <head>
     <style>
       /* Mengatur warna latar belakang secara khusus */
-.background-color {
-  background-color: #D57E7E; /* Warna latar belakang default */
-}
+      .background-color {
+        background-color: #D57E7E; /* Warna latar belakang default */
+      }
 
-/* Mengatur tampilan navigasi header */
-#header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #D57E7E;
-  width: 100%;
-  padding: 10px 15px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-}
+      /* Mengatur tampilan navigasi header */
+      #header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #D57E7E;
+        width: 100%;
+        padding: 10px 15px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+      }
 
-/* Menempatkan logo/nama di sebelah kiri */
-.nav-logo {
-  font-size: 24px; /* Ditingkatkan dari 20px */
-  color: #ffffff;
-  font-weight: bold;
-}
+      /* Menempatkan logo/nama di sebelah kiri */
+      .nav-logo {
+        font-size: 24px; /* Ditingkatkan dari 20px */
+        color: #ffffff;
+        font-weight: bold;
+      }
 
-/* Mengatur tampilan menu navigasi di sebelah kanan */
-.nav-menu {
-  display: flex;
-  margin-right: 30px; /* Memberikan jarak antara menu navigasi dan sisi kanan */
-  gap: 15px;
-}
+      /* Mengatur tampilan menu navigasi di sebelah kanan */
+      .nav-menu {
+        display: flex;
+        margin-right: 30px; /* Memberikan jarak antara menu navigasi dan sisi kanan */
+        gap: 15px;
+      }
 
-.nav_menu_list {
-  list-style-type: none;
-  display: flex;
-  gap: 15px;
-  margin: 0;
-  padding: 0;
-}
+      .nav_menu_list {
+        list-style-type: none;
+        display: flex;
+        gap: 15px;
+        margin: 0;
+        padding: 0;
+      }
 
-/* Mengatur tampilan link navigasi */
-.nav-link {
-  color: #333;
-  text-decoration: none;
-  font-size: 18px; /* Ditingkatkan dari 16px */
-  transition: color 0.3s;
-}
+      /* Mengatur tampilan link navigasi */
+      .nav-link {
+        color: #333;
+        text-decoration: none;
+        font-size: 18px; /* Ditingkatkan dari 16px */
+        transition: color 0.3s;
+      }
 
-.nav-link:hover {
-  color: #ffffff;
-}
+      .nav-link:hover {
+        color: #ffffff;
+      }
 
-/* Mengatur pemusatan konten utama */
-.content-wrapper {
-  text-align: center;
-}
+      /* Mengatur pemusatan konten utama */
+      .content-wrapper {
+        text-align: center;
+        padding: 20px;
+      }
 
-/* Menyesuaikan gambar agar berada di tengah halaman */
-#gambar {
-  display: block;
-  margin: 0 auto;
-  border: 2px solid #5F7A61;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
+      /* Menyesuaikan gambar agar berada di tengah halaman */
+      #gambar {
+        display: block;
+        margin: 0 auto;
+        border: 2px solid #5F7A61;
+        border-radius: 8px;
+        margin-bottom: 10px;
+      }
 
-/* Menyesuaikan tampilan tombol */
-button {
-  background-color: #5F7A61;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
+      /* Menyesuaikan tampilan tombol */
+      button {
+        background-color: #5F7A61;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s ease-in-out;
+      }
 
-/* Warna tombol saat di-hover */
-button:hover {
-  background-color: #45a049;
-}
+      /* Warna tombol saat di-hover */
+      button:hover {
+        background-color: #45a049;
+        transform: scale(1.05); /* Tombol sedikit membesar saat di-hover */
+      }
 
-/* Styling untuk footer */
-footer {
-  background-color: rgb(90, 139, 100);
-  padding: 15px;
-  text-align: center;
-  width: 100%;
-  color: white;
-  margin-top: auto;
-}
+      /* Styling untuk footer */
+      footer {
+        background-color: rgb(90, 139, 100);
+        padding: 15px;
+        text-align: center;
+        width: 100%;
+        color: white;
+        margin-top: auto;
+      }
 
-.footer-menu {
-  list-style: none;
-  padding: 0;
-}
+      .footer-menu {
+        list-style: none;
+        padding: 0;
+      }
 
-.footer-menu li {
-  display: inline;
-  margin: 0 10px;
-}
+      .footer-menu li {
+        display: inline;
+        margin: 0 10px;
+      }
 
-.footer-menu a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px; /* Menambahkan ukuran font untuk memperbesar teks */
-}
+      .footer-menu a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px; /* Menambahkan ukuran font untuk memperbesar teks */
+      }
 
-.footer-menu a:hover {
-  text-decoration: underline;
-}
+      .footer-menu a:hover {
+        text-decoration: underline;
+      }
 
-.footer-social-icons {
-  margin: 10px 0;
-}
+      .footer-social-icons {
+        margin: 10px 0;
+      }
 
-.footer-social-icons .icon {
-  display: inline-block;
-  margin: 0 5px;
-}
+      .footer-social-icons .icon {
+        display: inline-block;
+        margin: 0 5px;
+      }
 
-.bottom-footer p {
-  margin: 0;
-}
+      .bottom-footer p {
+        margin: 0;
+      }
 
+      /* Styling untuk kanvas agar terlihat lebih menarik */
+      canvas {
+        border-radius: 12px;
+        box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+        border: 2px solid #5F7A61;
+        background: linear-gradient(135deg, #f3f4f9, #e4e8e4); /* Menambahkan latar belakang gradien pada kanvas */
+        max-width: 100%;
+        margin-bottom: 20px;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      /* Menambahkan efek saat mouse hover di atas kanvas */
+      canvas:hover {
+        transform: scale(1.03);
+        box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.3);
+      }
 
     </style>
   </head>
@@ -138,10 +156,11 @@ footer {
       </div>
       <div class="nav-menu" id="myNavMenu">
         <ul class="nav_menu_list">
-          <li class="nav_list"><a href="index (1).html" class="nav-link">Home</a></li>
-          <li class="nav_list"><a href="index (1).html#about" class="nav-link">About</a></li>
-          <li class="nav_list"><a href="index (1).html#projects" class="nav-link">Project</a></li>          <li class="nav_list"><a href="index (1).html#tutorial" class="nav-link">Tutorial</a></li>
-          <li class="nav_list"><a href="index (1).html#contact" class="nav-link">Contact</a></li>
+          <li class="nav_list"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav_list"><a href="index.html#about" class="nav-link">About</a></li>
+          <li class="nav_list"><a href="index.html#projects" class="nav-link">Project</a></li>
+          <li class="nav_list"><a href="tutorial.html" class="nav-link">Tutorial</a></li>
+          <li class="nav_list"><a href="index.html#contact" class="nav-link">Contact</a></li>
         </ul>
       </div>
     </nav>
@@ -168,14 +187,16 @@ footer {
 
       <p><button onclick="kanvas()">Try it</button></p>
       <h2>Langkah-langakah Membuat Canvas</h2>
-      <li>Penerapan Warna Latar Belakang Halaman</li>
-      <li>Pengaturan Header</li>
-      <li>Membuat Daftar Menu Navigasi</li>
-      <li>Menampilkan Gambar dan Area Kanvas</li>
-      <li>Tombol Interaktif</li>
-      <li>Fungsi JavaScript untuk Menggambar Gambar pada Kanvas</li>
-      <li>Menambahkan Footer</li>
-      <li>Pengaturan Responsif</li>
+      <ul>
+        <li>Penerapan Warna Latar Belakang Halaman</li>
+        <li>Pengaturan Header</li>
+        <li>Membuat Daftar Menu Navigasi</li>
+        <li>Menampilkan Gambar dan Area Kanvas</li>
+        <li>Tombol Interaktif</li>
+        <li>Fungsi JavaScript untuk Menggambar Gambar pada Kanvas</li>
+        <li>Menambahkan Footer</li>
+        <li>Pengaturan Responsif</li>
+      </ul>
     </div>
 
     <script>
@@ -188,42 +209,32 @@ footer {
     </script>
 
     <!-- Footer -->
-  <footer>
-    <div class="top-footer">
-      <p>Mercy S Batuani</p>
-    </div>
-    <div class="middle-footer">
-      <ul class="footer-menu">
-        <li class="footer_menu_list"><a href="#home">Home</a></li>
-        <li class="footer_menu_list"><a href="#about">About</a></li>
-        <li class="footer_menu_list"><a href="#projects">Projects</a></li>
-        <li class="nav_list"><a href="tutorial.html" class="nav-link">Tutorial</a></li>
-        <li class="footer_menu_list"><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-    <div class="footer-social-icons">
-      <div class="icon"><i class="uil uil-instagram"></i></div>
-      <div class="icon"><i class="uil uil-linkedin-alt"></i></div>
-      <div class="icon"><i class="uil uil-dribbble"></i></div>
-      <div class="icon"><i class="uil uil-github-alt"></i></div>
-    </div>
-    <div class="bottom-footer">
-      <p>
-        Copyright &copy;
-        <a href="#home" style="text-decoration: none; color: white">Mercy aja</a> - All rights reserved
-      </p>
+    <footer>
+      <div class="top-footer">
+        <p>Mercy S Batuani</p>
+      </div>
+      <div class="middle-footer">
+        <ul class="footer-menu">
+          <li class="footer_menu_list"><a href="#home">Home</a></li>
+          <li class="footer_menu_list"><a href="#about">About</a></li>
+          <li class="footer_menu_list"><a href="#projects">Projects</a></li>
+          <li class="nav_list"><a href="tutorial.html" class="nav-link">Tutorial</a></li>
+          <li class="footer_menu_list"><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-social-icons">
+        <div class="icon"><i class="uil uil-instagram"></i></div>
+        <div class="icon"><i class="uil uil-linkedin-alt"></i></div>
+        <div class="icon"><i class="uil uil-dribbble"></i></div>
+        <div class="icon"><i class="uil uil-github-alt"></i></div>
+      </div>
+      <div class="bottom-footer">
+        <p>
+          Copyright &copy;
+          <a href="#home" style="text-decoration: none; color: white">Mercy aja</a> - All rights reserved
+        </p>
+      </div>
     </footer>
-    </div>
 
-  <!-- ----- TYPING JS Link ----- -->
-  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-
-  <!-- ----- SCROLL REVEAL JS Link----- -->
-  <script src="https://unpkg.com/scrollreveal"></script>
-
-  <!-- ----- MAIN JS ----- -->
-  <script src="assets/js/main.js"></script>
-</body>
+  </body>
 </html>
-
-   

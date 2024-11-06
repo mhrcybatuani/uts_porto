@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- --------- CSS ---------- -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- --------- UNICONS ---------- -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
+
+    <title>Geolocation API</title>
+    <style>
+      /* Global Body Styling */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto', sans-serif;
+        background-color: #db7575;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      /* Container Styling */
+      .container {
+        text-align: center;
+        background-color: #5F7161;
+        border-radius: 15px;
+        padding: 40px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        width: 100%;
+        margin-top: 150px; /* Adjust for navbar height */
+      }
+
+      h1 {
+        font-size: 28px;
+        color: #010101;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+      }
+
+      /* Stylish Button */
+      button {
+        background-color: #408b59;
+        color: #fff;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 25px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-top: 20px;
+        width: 80%;
+      }
+
+      button:hover {
+        background-color: #d1b0a8;
+      }
+
+      /* Button for Download CV */
+      .nav-button .btn {
+        padding: 8px 16px;
+        border: none;
+        border-radius: 4px;
+        background-color: #efefef;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .nav-button .btn:hover {
+        background-color: #3b874d;
+        color: rgb(255, 255, 255);
+      }
+
+      /* Location result box */
+      #location {
+        margin-top: 30px;
+        padding: 20px;
+        border-radius: 15px;
+        background-color: #faf3ec;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        display: none;
+        max-width: 90%;
+      }
+
+      h3 {
+        font-size: 22px;
+        color: #c5705d;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 16px;
+        color: #555;
+        margin: 5px 0;
+      }
+
+      /* Section for Tutorial */
+      .geolocation-section {
+        margin-top: 20px;
+        padding: 20px;
+        border-radius: 15px;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        max-width: 600px;
+        width: 100%;
+      }
+
+      .geolocation-section h3 {
+        font-size: 22px;
+        color: #c5705d;
+      }
+
+      .geolocation-section p {
+        font-size: 16px;
+        color: #555;
+      }
+
+      .geolocation-section code {
+        background-color: #f4f4f4;
+        padding: 5px;
+        border-radius: 5px;
+      }
+
+      .geolocation-section ul {
+        list-style-type: disc;
+        margin-left: 20px;
+      }
+
+      .geolocation-section li {
+        margin-bottom: 10px;
+        font-size: 16px;
+      }
+
+      /* Navbar Styling */
+      nav {
+        width: 100%;
+        background-color: #db7575;
+        color: white;
+        padding: 15px 20px;
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .nav-logo p {
+        font-size: 24px;
+        font-weight: bold;
+        color: white;
+        margin: 0;
+      }
+
+      .nav-menu {
+        display: flex;
+        justify-content: space-around;
+        width: 50%;
+      }
+
+      .nav-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .nav-list a {
+        color: rgb(8, 8, 8);
+        text-decoration: none;
+        font-size: 16px;
+        margin: 0 15px;
+        text-transform: uppercase;
+      }
+
+      .nav-list a:hover {
+        color: #ff6347;
+      }
+
+      .nav-button {
+        display: inline-block;
+      }
+
+      /* Mobile Menu Icon */
+      .nav-menu-btn {
+        display: none;
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 768px) {
+        .nav-menu {
+          display: none;
+          flex-direction: column;
+          width: 100%;
+        }
+
+        .nav-menu-btn {
+          display: block;
+          color: white;
+          font-size: 24px;
+          cursor: pointer;
+        }
+
+        .nav-menu.active {
+          display: flex;
+        }
+
+        .nav-list a {
+          margin: 10px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- --------------- HEADER --------------- -->
+    <nav id="header">
+      <div class="nav-logo">
+        <p class="nav-name">Geolocation</p>
+      </div>
+      <div class="nav-menu" id="myNavMenu">
+        <ul class="nav_menu_list">
+          <li class="nav_list"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav_list"><a href="index.html#about" class="nav-link">About</a></li>
+          <li class="nav_list"><a href="index.html#projects" class="nav-link">Project</a></li>
+          <li class="nav_list"><a href="tutorial.html" class="nav-link">Tutorial</a></li> 
+          <li class="nav_list"><a href="index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+      <div class="nav-button">
+        <button class="btn">
+          Download CV <i class="uil uil-file-alt"></i>
+        </button>
+      </div>
+      <div class="nav-menu-btn">
+        <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+      <h1>Get User Location with Geolocation API</h1>
+      <button onclick="getLocation()">Get Location</button>
+
+      <div id="location">
+        <h3>Your Location:</h3>
+        <p>Latitude: <span id="latitude"></span></p>
+        <p>Longitude: <span id="longitude"></span></p>
+        <p>Accuracy: <span id="accuracy"></span> meters</p>
+      </div>
+    </div>
+
+    <!-- Tutorial Content -->
+    <main class="content-wrapper">
+      <h2>Cara Menggunakan Geolocation API</h2>
+      
+      <section class="geolocation-section">
+        <h3>Mengecek Dukungan Geolocation di Browser</h3>
+        <p>  
+          Sebelum mencoba untuk mendapatkan lokasi pengguna, pastikan bahwa browser yang digunakan mendukung Geolocation API. 
+          Ini bisa dilakukan dengan memeriksa apakah <code>navigator.geolocation</code> ada.
+        </p>
+      </section>
+    
+      <section class="geolocation-section">
+        <h3>Membuat Permintaan Lokasi Pengguna</h3>
+        <p>
+          Geolocation API memiliki metode <code>getCurrentPosition()</code> yang digunakan untuk meminta lokasi pengguna. 
+          Ini akan memicu dua callback: satu untuk keberhasilan dan satu untuk kegagalan.
+        </p>
+        <ul>
+          <li><strong>Callback sukses:</strong> Dijalankan ketika lokasi berhasil didapatkan.</li>
+          <li><strong>Callback gagal:</strong> Dijalankan ketika ada kesalahan, misalnya jika pengguna menolak permintaan atau lokasi tidak tersedia.</li>
+        </ul>
+      </section>
+    </main>
+
+    <script>
+      // Function to get user location
+      function getLocation() {
+        const locationBox = document.getElementById("location");
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition, showError);
+        } else {
+          alert("Geolocation is not supported by this browser.");
+        }
+
+        // Add loading effect to the button
+        const button = document.querySelector(
+          "button[onclick='getLocation()']"
+        );
+        button.innerHTML = "Getting Location...";
+        button.disabled = true;
+        button.style.backgroundColor = "#ceae98";
+      }
+
+      // Function to display position
+      function showPosition(position) {
+        document.getElementById("latitude").innerHTML =
+          position.coords.latitude;
+        document.getElementById("longitude").innerHTML =
+          position.coords.longitude;
+        document.getElementById("accuracy").innerHTML =
+          position.coords.accuracy + " meters";
+
+        // Show the location div
+        const locationBox = document.getElementById("location");
+        locationBox.style.display = "block";
+
+        // Revert button state
+        const button = document.querySelector(
+          "button[onclick='getLocation()']"
+        );
+        button.innerHTML = "Get Location";
+        button.disabled = false;
+        button.style.backgroundColor = "#b15945";
+      }
+
+      // Function to handle errors
+      function showError(error) {
+        switch (error.code) {
+          case error.PERMISSION_DENIED:
+            alert("User denied the request for Geolocation.");
+            break;
+          case error.POSITION_UNAVAILABLE:
+            alert("Location information is unavailable.");
+            break;
+          case error.TIMEOUT:
+            alert("The request to get user location timed out.");
+            break;
+          case error.UNKNOWN_ERROR:
+            alert("An unknown error occurred.");
+            break;
+        }
+
+        // Revert button state even in case of an error
+        const button = document.querySelector(
+          "button[onclick='getLocation()']"
+        );
+        button.innerHTML = "Get Location";
+        button.disabled = false;
+        button.style.backgroundColor = "#c5705d";
+      }
+    </script>
+  </body>
+</html>
