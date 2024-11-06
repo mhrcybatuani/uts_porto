@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- --------- UNICONS ---------- -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
+
+    <!-- --------- CSS ---------- -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- --------- FAVICON ---------- -->
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.png"
+      type="image/x-icon"
+    />
+
+    <title>Tabel Data Mahasiswa</title>
+    <style>
+      /* Styling untuk navbar */
+      #header {
+        position: fixed; 
+        top: 0; 
+        left: 0; 
+        width: 100%; 
+        background-color: #d57e7e(90, 139, 100);
+        z-index: 1000; 
+        padding: 10px 0; 
+      }
+
+      .nav-menu {
+        text-align: center; /* Menjaga menu berada di tengah */
+      }
+
+      .nav_menu_list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav_list {
+        display: inline-block;
+        margin-right: 20px;
+      }
+
+      .nav-link {
+        color: rgb(8, 8, 8); /* Warna teks navbar */
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .nav-link:hover {
+        text-decoration: underline; /* Menambahkan garis bawah pada hover */
+      }
+
+      /* Styling untuk tabel */
+      .container {
+        text-align: center; 
+        width: 100%; 
+        max-width: 800px; 
+        margin: 0 auto; 
+        margin-top: 80px; 
+      }
+
+      table {
+        margin-top: 30px; /* Adjust spacing as needed */
+        margin-bottom: 30px;
+        width: 100%; /* Full width of container */
+        border-collapse: collapse;
+        background-color: aliceblue;
+      }
+
+      th,
+      td {
+        border: 1px solid rgb(16, 16, 16);
+        padding: 8px;
+        text-align: center;
+      }
+
+      th {
+        background-color: rgb(90, 139, 100);
+        color: #fffcfc;
+      }
+
+      h2 {
+        margin-top: 80px; /* Memberikan jarak agar judul tidak tertutup navbar */
+      }
+
+      .featured-text-info p {
+        color: #f1f7f2;
+      }
+
+      /* Styling untuk footer */
+      footer {
+        background-color: rgb(90, 139, 100); /* Warna awal footer */
+        background-image: url('assets/images/your-background-image.jpg');
+        background-size: cover;
+        background-position: center;
+        padding: 15px;
+        text-align: center;
+        width: 100%;
+        color: white;
+        opacity: 0.9;
+      }
+
+      .footer-menu {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer-menu li {
+        display: inline;
+        margin: 0 10px;
+      }
+
+      .footer-menu a {
+        color: white;
+        text-decoration: none;
+      }
+
+      .footer-menu a:hover {
+        text-decoration: underline;
+      }
+
+      .footer-social-icons {
+        margin: 10px 0;
+      }
+
+      .footer-social-icons .icon {
+        display: inline-block;
+        margin: 0 5px;
+      }
+
+      .bottom-footer p {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- --------------- HEADER --------------- -->
+      <nav id="header">
+        <div class="nav-logo">
+          <p class="nav-name">Tutorial Tabel</p>
+        </div>
+        <div class="nav-menu" id="myNavMenu">
+          <ul class="nav_menu_list">
+            <li class="nav_list"><a href="index (1).html" class="nav-link">Home</a></li>
+            <li class="nav_list"><a href="index (1).html#about" class="nav-link">About</a></li>
+            <li class="nav_list"><a href="index (1).html#projects" class="nav-link">Project</a></li>
+            <li class="nav_list"><a href="tutorial.html" class="nav-link">Tutorial</a></li>
+            <li class="nav_list"><a href="index (1).html#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="nav-menu-btn">
+        <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+      </div>
+      <h2>Data Mahasiswa</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>NIM</th>
+            <th>Nama</th>
+            <th>IPK Sem 1</th>
+            <th>IPK Sem 2</th>
+            <th>IPK Sem 3</th>
+            <th>IPK Sem 4</th>
+            <th>IPK Sem 5</th>
+            <th>IPK Sem 6</th>
+            <th>IPK Sem 7</th>
+            <th>IPK Sem 8</th>
+            <th>Jurusan</th>
+            <th>Fakultas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>221031142</td>
+            <td>Nike Pratiwi Pasaribu</td>
+            <td>3.5</td>
+            <td>3.6</td>
+            <td>3.7</td>
+            <td>3.8</td>
+            <td>3.9</td>
+            <td>4.0</td>
+            <td>3.9</td>
+            <td>3.8</td>
+            <td>Informatika Medis</td>
+            <td>Teknik</td>
+          </tr>
+          <tr>
+            <td>221031100</td>
+            <td>Resky Julianti</td>
+            <td>3.3</td>
+            <td>3.4</td>
+            <td>3.5</td>
+            <td>3.6</td>
+            <td>3.7</td>
+            <td>3.8</td>
+            <td>3.9</td>
+            <td>4.0</td>
+            <td>Sistem Informasi</td>
+            <td>Ekonomi dan Bisnis</td>
+          </tr>
+          <tr>
+            <td>221031134</td>
+            <td>Mercy S Batuani</td>
+            <td>2.9</td>
+            <td>3.0</td>
+            <td>3.1</td>
+            <td>3.2</td>
+            <td>3.3</td>
+            <td>3.4</td>
+            <td>3.5</td>
+            <td>3.6</td>
+            <td>Akuntansi</td>
+            <td>Ekonomi</td>
+          </tr>
+          <tr>
+            <td>221031145</td>
+            <td>Yoel Gevariel</td>
+            <td>2.9</td>
+            <td>4.0</td>
+            <td>3.1</td>
+            <td>3.6</td>
+            <td>4.0</td>
+            <td>3.4</td>
+            <td>2.5</td>
+            <td>3.9</td>
+            <td>Psikologi</td>
+            <td>Ilmu Sosial</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="featured-text-info">
+      <h2>Langkah-langakah From Tabel</h2>
+      <li>Persiapkan Struktur HTML</li>
+      <li>Menyusun Tabel dengan HTML</li>
+      <li>Menyusun Body Tabel</li>
+      <li>Menata Tabel dengan CSS</li>
+      <li>Styling Umum untuk Tabel</li>
+      <li>Navbar (Menu Navigasi)</li>
+      <li>Menambahkan Footer </li>
+      <li> Menambahkan Responsivitas dan Penyelesaian</li>
+      <li>Menambahkan Interaksi dengan JavaScript (Opsional)</li>
+      <li>Menghubungkan Semua Elemen dengan Backend</li></li>
+
+      <!-- --------------- FOOTER --------------- -->
+      <footer>
+        <div class="top-footer">
+          <p>Mercy S Batuani</p>
+        </div>
+        <div class="middle-footer">
+          <ul class="footer-menu">
+            <li class="footer_menu_list">
+              <a href="#home">Home</a>
+            </li>
+            <li class="footer_menu_list">
+              <a href="#about">About</a>
+            </li>
+            <li class="footer_menu_list">
+              <a href="#projects">Projects</a>
+            </li>
+            <li class="footer_menu_list">
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-social-icons">
+          <div class="icon"><i class="uil uil-instagram"></i></div>
+          <div class="icon"><i class="uil uil-linkedin-alt"></i></div>
+          <div class="icon"><i class="uil uil-dribbble"></i></div>
+          <div class="icon"><i class="uil uil-github-alt"></i></div>
+        </div>
+        <div class="bottom-footer">
+          <p>
+            Copyright &copy;
+            <a href="#home" style="text-decoration: none">Mercy aja</a> - All
+            rights reserved
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- ----- TYPING JS Link ----- -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <!-- ----- SCROLL REVEAL JS Link----- -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- ----- MAIN JS ----- -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

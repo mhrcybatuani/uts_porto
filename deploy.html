@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Deploy ke GitHub Pages</title>
+    <style>
+        /* Styling untuk keseluruhan halaman */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #d57e7e;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Styling untuk navbar */
+        nav {
+            background-color: #d57e7e;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-name {
+            font-size: 30px;
+            color: #fff;
+            margin-right: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            padding: 10px 15px;
+        }
+
+        nav a {
+            color: #0b0b0b;
+            text-align: center;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            color: #090908;
+        }
+
+        /* Styling untuk header */
+        header {
+            background-color: #993c42;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        /* Main Content */
+        main {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #ff7043;
+        }
+
+        ol {
+            margin-left: 20px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        ol li {
+            margin-bottom: 15px;
+        }
+
+        a {
+            color: #ff7043;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: rgb(90, 139, 100);
+            color: rgb(19, 18, 18);
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .top-footer p {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .middle-footer {
+            margin: 20px 0;
+        }
+
+        .footer-menu {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .footer_menu_list {
+            margin: 0 20px;
+        }
+
+        .footer_menu_list a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .footer_menu_list a:hover {
+            color: #ff7043;
+        }
+
+        .footer-social-icons {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .footer-social-icons .icon {
+            margin: 0 10px;
+            font-size: 25px;
+        }
+
+        .footer-social-icons i {
+            color: white;
+            cursor: pointer;
+        }
+
+        .footer-social-icons i:hover {
+            color: #ff7043;
+        }
+
+        .bottom-footer p {
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+        .bottom-footer a {
+            color: #ff7043;
+            text-decoration: none;
+        }
+
+        .bottom-footer a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- --------------- HEADER (Navbar) --------------- -->
+<nav id="header">
+    <div class="nav-logo">
+        <p class="nav-name">Deploy</p>
+    </div>
+    <ul class="nav_menu_list">
+        <li class="nav_list"><a href="index (1).html" class="nav-link">Home</a></li>
+        <li class="nav_list"><a href="index (1).html#about" class="nav-link">About</a></li>
+        <li class="nav_list"><a href="index (1).html#projects" class="nav-link">Project</a></li>
+        <li class="nav_list"><a href="index (1).html#tutorial" class="nav-link">Tutorial</a></li>
+        <li class="nav_list"><a href="index (1).html#contact" class="nav-link">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Header Section -->
+<header>
+    <h1>Tutorial: Cara Deploy Website ke GitHub Pages</h1>
+</header>
+
+<!-- Main Content Section -->
+<main>
+    <section>
+        <h2>Langkah-langkah Deploy:</h2>
+        <ol>
+            <li><strong>Siapkan Proyek Website</strong>: Buat folder dan tempatkan semua file HTML, CSS, dan gambar di dalamnya.</li>
+            <li><strong>Buat Repositori di GitHub</strong>: Login ke GitHub dan buat repositori baru.</li>
+            <li><strong>Upload File ke GitHub</strong>: Unggah file website ke repositori GitHub yang telah dibuat.</li>
+            <li><strong>Aktifkan GitHub Pages</strong>: Pada halaman repositori, buka tab `Settings` dan scroll ke bawah untuk mengaktifkan GitHub Pages pada branch `main`.</li>
+            <li><strong>Akses Website</strong>: GitHub Pages akan memberikan URL website kamu, misalnya `https://username.github.io/my-website/`.</li>
+        </ol>
+    </section>
+</main>
+
+<!-- --------------- FOOTER --------------- -->
+<footer>
+    <div class="top-footer">
+        <p>Mercy S Batuani</p>
+    </div>
+    <div class="middle-footer">
+        <ul class="footer-menu">
+            <li class="footer_menu_list"><a href="#home">Home</a></li>
+            <li class="footer_menu_list"><a href="#about">About</a></li>
+            <li class="footer_menu_list"><a href="#projects">Projects</a></li>
+            <li class="footer_menu_list"><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+    <div class="footer-social-icons">
+        <div class="icon"><i class="uil uil-instagram"></i></div>
+        <div class="icon"><i class="uil uil-linkedin-alt"></i></div>
+        <div class="icon"><i class="uil uil-dribbble"></i></div>
+        <div class="icon"><i class="uil uil-github-alt"></i></div>
+    </div>
+    <div class="bottom-footer">
+        <p>Copyright &copy; <a href="#home">Mercy aja</a> - All rights reserved</p>
+    </div>
+</footer>
+
+<!-- ----- TYPING JS Link ----- -->
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+<!-- ----- SCROLL REVEAL JS Link----- -->
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<!-- ----- MAIN JS ----- -->
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

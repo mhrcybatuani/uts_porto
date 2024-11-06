@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- --------- UNICONS ---------- -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
+
+    <!-- --------- CSS ---------- -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- --------- FAVICON ---------- -->
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.png"
+      type="image/x-icon"
+    />
+
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- --------------- HEADER --------------- -->
+      <nav id="header">
+        <div class="nav-logo">
+          <p class="nav-name">Mercy Batuani</p>
+        </div>
+        <div class="nav-menu" id="myNavMenu">
+          <ul class="nav_menu_list">
+            <li class="nav_list"><a href="index (1).html" class="nav-link">Home</a></li>
+            <li class="nav_list"><a href="index (1).html#about" class="nav-link">About</a></li>
+            <li class="nav_list"><a href="index (1).html#projects" class="nav-link">Project</a></li> 
+            <li class="nav_list"><a href="tutorial.html" class="nav-link">Tutorial</a></li> 
+            <li class="nav_list"><a href="index (1).html#contact" class="nav-link">Contact</a></li>
+          </ul>
+          <!-- Add the Download CV button here to place it at the end of the menu -->
+          <a href="https://drive.google.com/file/d/1cQO70_LdAxBgnxk4P959avuYn9JqV0Rp/view?usp=sharing" target="_blank" class="download-cv-btn">
+            <button class="btn">
+              Download CV <i class="uil uil-file-alt"></i>
+            </button>
+          </a>
+        </div>
+        <div class="nav-menu-btn">
+          <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+        </div>
+      </nav>
+      
+
+      <!-- -------------- MAIN ---------------- -->
+      <main class="wrapper">
+       <!-- -------------- FEATURED BOX ---------------- -->
+<section class="featured-box" id="home">
+  <div class="featured-text">
+    <div class="featured-text-card">
+      <span>Mercy S Batuani</span>
+    </div>
+    <div class="featured-name">
+      <p>I'm <span class="typedText"></span></p>
+    </div>
+    <div class="featured-text-info">
+      <p>
+        I am a data engineer focused on building and managing reliable and efficient data infrastructure. 
+        With expertise in building scalable data pipelines, I ensure that data from various sources can be collected, processed, 
+        and optimized to support business analysis and informed decision making.
+      </p>
+    </div>
+    <div class="featured-text-btn">
+      <button class="btn blue-btn">Hire Me</button>
+      <a href="https://drive.google.com/file/d/1cQO70_LdAxBgnxk4P959avuYn9JqV0Rp/view?usp=sharing" target="_blank">
+        <button class="btn">
+          Download CV <i class="uil uil-file-alt"></i>
+        </button>
+      </a>
+    </div>
+    <div class="social_icons">
+      <div class="icon"><i class="uil uil-instagram"></i></div>
+      <div class="icon"><i class="uil uil-linkedin-alt"></i></div>
+      <div class="icon"><i class="uil uil-dribbble"></i></div>
+      <div class="icon"><i class="uil uil-github-alt"></i></div>
+    </div>
+  </div>
+  <div class="featured-image">
+    <div class="image">
+      <img src="assets/images/egen.jpeg" alt="avatar" />
+    </div>
+  </div>
+  
+  <div class="scroll-icon-box">
+    <a href="#about" class="scroll-btn">
+      <i class="uil uil-mouse-alt"></i>
+      <p>Scroll Down</p>
+    </a>
+  </div>
+</section>
+
+        <!-- -------------- ABOUT BOX ---------------- -->
+        <section class="section" id="about">
+          <div class="top-header">
+            <h1>About Me</h1>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="about-info">
+                <h3>My introduction</h3>
+                <p>
+                  Saya adalah desainer web dan pengembang front-end yang fokus pada pengalaman pengguna yang fungsional dan menarik. 
+                  Saya telah mengerjakan beberapa proyek, termasuk Obelix, situs dengan desain responsif dan elegan, serta Malas Ngoding, platform tutorial untuk pengembang pemula. 
+                  Dengan keterampilan di HTML, CSS, dan JavaScript, saya berkomitmen menciptakan situs yang estetis dan performa tinggi.
+
+                </p>
+                <div class="about-btn">
+                  <a href="https://drive.google.com/file/d/1cQO70_LdAxBgnxk4P959avuYn9JqV0Rp/view?usp=sharing" target="_blank">
+                  <button class="btn">
+                    Download CV <i class="uil uil-import"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="skills-box">
+                <div class="skills-header">
+                  <h3>Frontend</h3>
+                </div>
+                <div class="skills-list">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>Bootstrap</span>
+                  <span>JavaScript</span>
+                  <span>Vue</span>
+                  <span>React</span>
+                  <span>Angular</span>
+                </div>
+              </div>
+              <div class="skills-box">
+                <div class="skills-header">
+                  <h3>Backend</h3>
+                </div>
+                <div class="skills-list">
+                  <span>PHP</span>
+                  <span>JAVA</span>
+                  <span>Python</span>
+                  <span>C++</span>
+                </div>
+              </div>
+              <div class="skills-box">
+                <div class="skills-header">
+                  <h3>Database</h3>
+                </div>
+                <div class="skills-list">
+                  <span>MySQL</span>
+                  <span>PostgreSQL</span>
+                  <span>MongoDB</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- -------------- PROJECT BOX ---------------- -->
+
+        <section class="section" id="projects">
+          <div class="top-header">
+            <h1>Projects</h1>
+          </div>
+          <div class="project-container">
+            <div class="project-box"
+              onClick="window.location.href='https://www.figma.com/file/o3pzSo7pPDCWaoi1S88Pe9/Kelompok-8-Obelix-Hills-SkyView?type=design&node-id=0%3A1&mode=design&t=n96yNo6L70me9J4H-1'">
+              <i class="uil uil-briefcase-alt"></i>
+              <h3>Desain Web Obelix</h3>
+              <label>beautiful and responsive design </label>
+            </div>
+            <div class="project-box"
+            onClick="window.location.href='(http://127.0.0.1:3000/HTML/index.html)'"> 
+              <i class="uil uil-users-alt"></i>
+              <h3>Project Pemrograman web Pratik</h3>
+              <label>Pro Management APP</label>
+            </div>
+          <div class="project-box"
+          onClick="window.location.href='https://www.figma.com/design/na2tPjwmBaZGuiGtBnnrff/Daftar-Siswa-(Community)?node-id=10-2&node-type=canvas&t=LHMXdMahrgHxpfcV-0'"> 
+            <i class="uil uil-comment-heart"></i>
+            <h3>Sistem Informasi Pengolahan Data Siswa</h3>
+            <label>Simple and Secure Chat-app</label>
+          </div>
+        </section>
+
+        <!-- -------------- CONTACT BOX ---------------- -->
+
+        <section class="section" id="contact">
+          <div class="top-header">
+            <h1>Get in touch</h1>
+            <span>Do you have a project in your mind, contact me here</span>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="contact-info">
+                <h2>Find Me <i class="uil uil-corner-right-down"></i></h2>
+                <p><i class="uil uil-envelope"></i> Email: mhrcy@gmail.com</p>
+                <p><i class="uil uil-phone"></i> Call/Whatsapp :082455617854</p>
+              </div>
+            </div>
+            <div class="col"> 
+              <div class="form-control">
+                <div class="form-inputs">
+                  <input type="text" name="name" class="input-field" placeholder="Name" required />
+                  <input type="email" name="email" class="input-field" placeholder="Email" required />
+                </div>
+                <div class="text-area">
+                  <textarea name="message" placeholder="Message" required></textarea>
+                </div>
+                <div class="form-button">
+                  <button class="btn">
+                    Send <i class="uil uil-message"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- --------------- FOOTER --------------- -->
+      <footer>
+        <div class="top-footer">
+          <p>Mercy S Batuani</p>
+        </div>
+        <div class="middle-footer">
+          <ul class="footer-menu">
+            <li class="footer_menu_list">
+              <a href="#home">Home</a>
+            </li>
+            <li class="footer_menu_list">
+              <a href="#about">About</a>
+            </li>
+            <li class="footer_menu_list">
+              <a href="#projects">Projects</a>
+            </li>
+            <li class="footer_menu_list">
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-social-icons">
+          <div class="icon"><i class="uil uil-instagram"></i></div>
+          <div class="icon"><i class="uil uil-linkedin-alt"></i></div>
+          <div class="icon"><i class="uil uil-dribbble"></i></div>
+          <div class="icon"><i class="uil uil-github-alt"></i></div>
+        </div>
+        <div class="bottom-footer">
+          <p>
+            Copyright &copy;
+            <a href="#home" style="text-decoration: none">Mercy aja</a> - All
+            rights reserved
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- ----- TYPING JS Link ----- -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <!-- ----- SCROLL REVEAL JS Link----- -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- ----- MAIN JS ----- -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

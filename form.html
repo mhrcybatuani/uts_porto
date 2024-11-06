@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- --------- UNICONS ---------- -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
+
+  <!-- --------- CSS ---------- -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- --------- FAVICON ---------- -->
+  <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon" />
+
+  <title>Login Form</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #d57e7e;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Container utama */
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+      padding-top: 100px; /* Ubah nilai ini untuk menggeser konten lebih ke bawah */
+      gap: 20px;
+    }
+
+    .login-container {
+      background-color: rgb(90, 139, 100);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(250, 245, 245, 0.1);
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+      margin-top: 40px; /* Tambahkan margin atas yang lebih besar */
+    }
+
+    .login-container h2 {
+      margin-bottom: 20px;
+    }
+
+    .login-container input[type="text"],
+    .login-container input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #302c2c;
+      border-radius: 4px;
+    }
+
+    .login-container input[type="submit"],
+    .login-container input[type="reset"],
+    .btn-register {
+      width: 48%;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      color: white;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .login-container input[type="submit"] {
+      background-color: #5ba260;
+    }
+
+    .login-container input[type="reset"] {
+      background-color: #db7575;
+    }
+
+    .btn-register {
+      background-color: #5ba260;
+    }
+
+    .login-container input[type="submit"]:hover,
+    .login-container input[type="reset"]:hover,
+    .btn-register:hover {
+      opacity: 0.9;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+
+    /* Navbar tetap di bagian atas */
+    nav {
+      background-color: #d57e7e;
+      width: 100%;
+      padding: 10px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(205, 92, 92, 0.1);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-name {
+      font-size: 30px;
+      color: white;
+      margin-right: 10px;
+    }
+
+    .nav-menu ul {
+      list-style-type: none;
+      display: flex;
+      gap: 15px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-link {
+      color: rgb(25, 24, 24);
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .nav-link:hover {
+      text-decoration: underline;
+    }
+
+    .nav-menu-btn {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .nav-menu {
+        display: none;
+      }
+
+      .nav-menu-btn {
+        display: block;
+        color: white;
+        font-size: 24px;
+      }
+    }
+
+    /* Styling untuk footer */
+    footer {
+      background-color: rgb(90, 139, 100);
+      padding: 15px;
+      text-align: center;
+      width: 100%;
+      color: white;
+      margin-top: auto;
+    }
+
+    .footer-menu {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-menu li {
+      display: inline;
+      margin: 0 10px;
+    }
+
+    .footer-menu a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .footer-menu a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-social-icons {
+      margin: 10px 0;
+    }
+
+    .footer-social-icons .icon {
+      display: inline-block;
+      margin: 0 5px;
+    }
+
+    .bottom-footer p {
+      margin: 0;
+    }
+</style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- --------------- HEADER --------------- -->
+    <nav id="header">
+      <div class="nav-logo">
+        <p class="nav-name">Tutorial From</p>
+      </div>
+      <div class="nav-menu" id="myNavMenu">
+        <ul class="nav_menu_list">
+          <li class="nav_list"><a href="index (1).html" class="nav-link">Home</a></li>
+          <li class="nav_list"><a href="index (1).html#about" class="nav-link">About</a></li>
+          <li class="nav_list"><a href="index (1).html#projects" class="nav-link">Project</a></li> 
+          <li class="nav_list"><a href="tutorial.html" class="nav-link">Tutorial</a></li> 
+         <li class="nav_list"><a href="index (1).html#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Form Login -->
+    <div class="login-container">
+      <h2>Login</h2>
+      <form action="/login" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required />
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+
+        <div class="button-container">
+          <input type="submit" value="Login" />
+          <input type="reset" value="Reset" />
+          <input
+            type="button"
+            value="Register"
+            class="btn-register"
+            onclick="window.location.href='form_registrasi.html'"
+          />
+        </div>
+      </form>
+    </div>
+
+    <!-- Penjelasan di bawah form login -->
+    <div class="featured-text-info">
+      <h2>Langkah-langakah From login</h2>
+      <li>Membuat Struktur HTML</li>
+      <li>Menyusun konten seperti header (navbar), form login, dan footer.</li>
+      <li>Menetapkan font, warna latar belakang, dan layout agar seluruh halaman tampil secara vertikal dan fleksibel.</li>
+      <li>Form Login</li>
+      <li>Tombol dan Interaksi</li>
+      <li>Navbar (Menu Navigasi)</li>
+      <li>Footer menyertakan tautan untuk menu dan ikon media sosial. </li>
+      <li>Menambahkan Media Queries untuk Responsif</li>
+      <li>Menambahkan Interaksi dengan JavaScript (Opsional)</li>
+      <li>Menghubungkan Semua Elemen dengan Backend</li>
+
+      </p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="top-footer">
+      <p>Mercy S Batuani</p>
+    </div>
+    <div class="middle-footer">
+      <ul class="footer-menu">
+        <li class="footer_menu_list"><a href="#home">Home</a></li>
+        <li class="footer_menu_list"><a href="#about">About</a></li>
+        <li class="footer_menu_list"><a href="#projects">Projects</a></li>
+        <li class="footer_menu_list"><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-social-icons">
+      <div class="icon"><i class="uil uil-instagram"></i></div>
+      <div class="icon"><i class="uil uil-linkedin-alt"></i></div>
+      <div class="icon"><i class="uil uil-dribbble"></i></div>
+      <div class="icon"><i class="uil uil-github-alt"></i></div>
+    </div>
+    <div class="bottom-footer">
+      <p>
+        Copyright &copy;
+        <a href="#home" style="text-decoration: none; color: white">Mercy aja</a> - All rights reserved
+      </p>
+    </footer>
+    </div>
+
+  <!-- ----- TYPING JS Link ----- -->
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+  <!-- ----- SCROLL REVEAL JS Link----- -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <!-- ----- MAIN JS ----- -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

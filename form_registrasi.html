@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- --------- UNICONS ---------- -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
+
+    <!-- --------- CSS ---------- -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- --------- FAVICON ---------- -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon" />
+
+    <title>Registrasi</title>
+
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #D57E7E;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        gap: 20px; /* Jarak antara card petunjuk dan form */
+        padding-top: 50px; /* Memberikan ruang untuk navbar */
+    }
+
+    /* Pengaturan container form login */
+    .login-container, .instructions-card {
+        background-color: rgb(90, 139, 100);
+        padding: 25px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+        width: 100%;
+    }
+
+    /* Pengaturan judul form */
+    .login-container h2 {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    /* Pengaturan input text dan password */
+    .login-container input[type="text"],
+    .login-container input[type="password"],
+    .login-container input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    /* Pengaturan tombol submit dan reset */
+    .login-container input[type="submit"],
+    .login-container input[type="reset"] {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        color: white;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    /* Pengaturan tombol submit */
+    .login-container input[type="submit"] {
+        background-color: #4CAF50;
+    }
+
+    /* Pengaturan tombol reset */
+    .login-container input[type="reset"] {
+        background-color: #db7575; /* Merah untuk tombol reset */
+        margin-top: 5px; /* Jarak atas yang lebih kecil */
+    }
+
+    /* Efek hover tombol */
+    .login-container input[type="submit"]:hover {
+        opacity: 0.9;
+    }
+
+    .login-container input[type="reset"]:hover {
+        opacity: 0.9;
+    }
+
+    /* Card untuk instruksi */
+    .instructions-card {
+        font-size: 14px;
+        color: #172b1c;
+        line-height: 1.5;
+    }
+
+    .instructions-card h3 {
+        text-align: center;
+        margin-top: 0;
+        font-size: 16px;
+        color: #09540e; /* Warna hijau untuk judul card */
+    }
+
+    /* Pengaturan navigasi */
+    nav {
+        background-color: #D57E7E;
+        width: 100%;
+        padding: 10px; /* Mengurangi padding untuk memperkecil navbar */
+        position: fixed; /* Membuat navbar tetap di posisi atas */
+        top: 0; /* Navbar berada di bagian paling atas */
+        left: 0;
+        right: 0;
+        z-index: 1000; /* Agar selalu berada di atas konten lainnya */
+    }
+
+    nav .nav-logo {
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav .nav-logo span {
+        font-size: 20px; /* Mengecilkan ukuran font pada logo */
+        color: #D57E7E;
+    }
+
+    nav .nav-menu ul {
+        list-style-type: none;
+        display: flex;
+        gap: 15px; /* Mengurangi jarak antar menu */
+    }
+
+    nav .nav-menu ul li {
+        display: inline;
+    }
+
+    nav .nav-link {
+        color: rgb(16, 15, 15);
+        text-decoration: none;
+        font-size: 14px; /* Mengecilkan ukuran font pada link */
+    }
+
+    .nav-button .btn {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 8px 15px; /* Mengurangi padding pada tombol */
+        cursor: pointer;
+    }
+
+    .nav-button .btn i {
+        margin-left: 8px;
+    }
+
+    /* Menu button untuk navigasi mobile */
+    .nav-menu-btn i {
+        color: white;
+        font-size: 20px; /* Mengecilkan ikon menu mobile */
+    }
+
+    /* Pengaturan footer */
+    footer {
+        background-color: rgb(90, 139, 100);
+        padding: 15px;
+        text-align: center;
+        width: 100%;
+    }
+
+    footer .top-footer {
+        margin-bottom: 10px;
+    }
+
+    footer .footer-menu {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    footer .footer-menu li {
+        display: inline;
+        margin: 0 10px;
+    }
+
+    footer .footer-social-icons .icon {
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+    .bottom-footer {
+        margin-top: 10px;
+    }
+
+    </style>
+</head>
+<body>
+    <!-- --------------- HEADER --------------- -->
+    <nav id="header">
+        <div class="nav-logo">
+            <p class="nav-name">Registrasi</p>
+        </div>
+        <div class="nav-menu" id="myNavMenu">
+            <ul class="nav_menu_list">
+                <li class="nav_list"><a href="index (1).html" class="nav-link">Home</a></li>
+                <li class="nav_list"><a href="index (1).html#about" class="nav-link">About</a></li>
+                <li class="nav_list"><a href="index (1).html#projects" class="nav-link">Project</a></li>
+                <li class="nav_list"><a href="tutorial.html" class="nav-link">Tutorial</a></li> 
+                <li class="nav_list"><a href="index (1).html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+        <div class="nav-menu-btn">
+            <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+        </div>
+    </nav>
+
+    <!-- Form Registrasi -->
+    <div class="login-container">
+        <h2>Registrasi</h2>
+        <form action="form.html" method="POST">
+            <label for="nim">NIM:</label>
+            <input type="text" id="nim" name="nim" placeholder="Masukkan NIM" required>
+
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama" placeholder="Masukkan Nama Lengkap" required>
+
+            <label for="jurusan">Jurusan:</label>
+            <input type="text" id="jurusan" name="jurusan" placeholder="Masukkan Jurusan" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Masukkan Email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Masukkan Password" required>
+
+            <input type="submit" value="Daftar">
+            <input type="reset" value="Reset"> <!-- Tambahkan tombol reset di sini -->
+        </form>
+    </div>
+
+    <div class="featured-text-info">
+        <h3>Langkah-Langakah Registrasi</h3>
+        <li>Membuat Struktur HTML Dasar</li>
+        <li>Membuat Formulir Registrasi.</li>
+        <li>Tombol Submit dan Reset</li>
+        <li>Mengatur Tampilan Body</li>
+        <li>Formulir Registrasi</li>
+        <li>Navbar (Menu Navigasi)</li>
+        <li>Footer pada halaman ini menampilkan informasi tentang pemilik website dan menu navigasi tambahan yang mengarah ke berbagai bagian. </li>
+        <li>Menambahkan Media Queries untuk Responsif</li>
+        <li>Menambahkan Interaksi dengan JavaScript (Opsional)</li>
+        <li>Menghubungkan Semua Elemen dengan Backend</li>
+  
+    </div>
+
+    <!-- --------------- FOOTER --------------- -->
+    <footer>
+        <div class="top-footer">
+            <p>Mercy S Batuani</p>
+        </div>
+        <div class="middle-footer">
+            <ul class="footer-menu">
+                <li class="footer_menu_list">
+                    <a href="#home">Home</a>
+                </li>
+                <li class="footer_menu_list">
+                    <a href="#about">About</a>
+                </li>
+                <li class="footer_menu_list">
+                    <a href="#projects">Projects</a>
+                </li>
+                <li class="footer_menu_list">
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-social-icons">
+            <div class="icon"><i class="uil uil-instagram"></i></div>
+            <div class="icon"><i class="uil uil-linkedin-alt"></i></div>
+            <div class="icon"><i class="uil uil-dribbble"></i></div>
+            <div class="icon"><i class="uil uil-github-alt"></i></div>
+        </div>
+        <div class="bottom-footer">
+            <p>
+                Copyright &copy;
+                <a href="#home" style="text-decoration: none">Mercy aja</a> - All
+                rights reserved
+            </p>
+        </div>
+    </footer>
+
+    <!-- ----- TYPING JS Link ----- -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <!-- ----- SCROLL REVEAL JS Link----- -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- ----- MAIN JS ----- -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

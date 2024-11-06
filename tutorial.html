@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- --------- UNICONS ---------- -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
+
+    <!-- --------- CSS ---------- -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- --------- FAVICON ---------- -->
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.png"
+      type="image/x-icon"
+    />
+
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav id="header">
+        <div class="nav-logo">
+            <p class="nav-name">Tutorial</p>
+        </div>
+         <!-- --------------- HEADER --------------- -->
+        <div class="nav-menu" id="myNavMenu">
+            <ul class="nav_menu_list">
+                <li class="nav_list"><a href="index (1).html" class="nav-link">Home</a></li>
+                <li class="nav_list"><a href="index (1).html#about" class="nav-link">About</a></li>
+                <li class="nav_list"><a href="index (1).html#project" class="nav-link">Project</a></li>
+                <li class="nav_list"><a href="index (1).html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+        <div class="nav-menu-btn">
+            <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+        </div>
+    </nav>
+
+      <!-- -------------- MAIN ---------------- -->
+      <main class="wrapper">
+        <section class="section" id="tutorials">
+          <div class="top-header">
+            <h1>Tutorial</h1>
+          </div>
+
+          <!-- Tutorial Links -->
+          <div class="project-container">
+            <!-- Tutorial Form -->
+            <div class="project-box" onClick="window.location.href='form.html'">
+              <i class="uil uil-file-alt"></i>
+              <h3>Form Tutorial</h3>
+              <label>Learn how to build forms with HTML</label>
+            </div>
+
+            <!-- Tutorial Tabel -->
+            <div class="project-box" onClick="window.location.href='tabel.html'"> <!-- Perubahan di sini -->
+              <i class="uil uil-table"></i>
+              <h3>Tabel Tutorial</h3>
+              <label>Master creating and styling tables in HTML</label>
+            </div>
+
+            <!-- Tutorial HTML5 Geolocation API -->
+            <div class="project-box" onClick="window.location.href='loc.html'">
+              <i class="uil uil-location-point"></i>
+              <h3>HTML5 Geolocation API</h3>
+              <label>Learn how to use the Geolocation API in HTML5</label>
+            </div>
+
+            <!-- Tutorial Canvas -->
+            <div class="project-box" onClick="window.location.href='kanvas.html'">
+              <i class="uil uil-paint-tool"></i>
+              <h3>Canvas Tutorial</h3>
+              <label>Explore HTML5 Canvas for graphics and animations</label>
+            </div>
+
+            <!-- Tutorial Deploy to GitHub -->
+            <div class="project-box" onClick="window.location.href='deploy.html'">
+              <i class="uil uil-github-alt"></i>
+              <h3>Deploy to GitHub</h3>
+              <label>Learn how to deploy your web project to GitHub</label>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- --------------- FOOTER --------------- -->
+      <footer>
+        <div class="top-footer">
+          <p>Mercy S Batuani</p>
+        </div>
+        <div class="middle-footer">
+          <ul class="footer-menu">
+            <li class="footer_menu_list">
+              <a href="#home">Home</a>
+            </li>
+            <li class="footer_menu_list">
+              <a href="#about">About</a>
+            </li>
+            <li class="footer_menu_list">
+              <a href="#projects">Projects</a>
+            </li>
+            <li class="footer_menu_list">
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-social-icons">
+          <div class="icon"><i class="uil uil-instagram"></i></div>
+          <div class="icon"><i class="uil uil-linkedin-alt"></i></div>
+          <div class="icon"><i class="uil uil-dribbble"></i></div>
+          <div class="icon"><i class="uil uil-github-alt"></i></div>
+        </div>
+        <div class="bottom-footer">
+          <p>
+            Copyright &copy;
+            <a href="#home" style="text-decoration: none">Mercy aja</a> - All
+            rights reserved
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- ----- MAIN JS ----- -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
